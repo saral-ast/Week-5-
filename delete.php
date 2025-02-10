@@ -14,6 +14,12 @@
     <h1>Hello</h1>
     <a href="./home.html">Link</a>
     <?php
+     include_once("db_connect.php");
+        //  $conn->query("SELECT * FROM users");
+         if($conn->connect_error){
+             echo "Table does not exist";
+            }
+        
           unset($_SESSION["favcolor"]);
           unset($_SESSION["favanimal"]);
           session_destroy();
